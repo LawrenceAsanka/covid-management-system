@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="758.0" prefWidth="800.0" style="-fx-background-color:linear-gradient(to bottom, #1c4966 40%, #296d98 83%);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CovidDataUpdateController">
+   <children>
+      <StackPane layoutX="36.0" prefHeight="743.0" prefWidth="748.0" style="-fx-background-color: WHITE;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="687.0" fitWidth="748.0" nodeOrientation="INHERIT" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/home.jpg" />
+               </image>
+               <StackPane.margin>
+                  <Insets bottom="300.0" />
+               </StackPane.margin>
+            </ImageView>
+            <AnchorPane prefHeight="722.0" prefWidth="692.0">
+               <children>
+                  <HBox alignment="CENTER" layoutY="138.0" prefHeight="597.0" prefWidth="748.0">
+                     <children>
+                        <VBox fx:id="vbox_data_field" prefHeight="597.0" prefWidth="635.0" style="-fx-background-color: transparent;">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="5.0" top="15.0" />
+                           </HBox.margin>
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #00ff00;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="130.0" layoutY="24.0" text="Last Updated" textFill="#6b6767">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font></Label>
+                                    <Label fx:id="lbl_updatedDate" alignment="CENTER" layoutX="89.0" layoutY="55.0" prefHeight="36.0" prefWidth="195.0" text="Label">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font></Label>
+                                    <ImageView fitHeight="93.0" fitWidth="113.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/calendar.gif" />
+                                       </image></ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Pane>
+                              <Pane layoutX="11.0" layoutY="11.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #00ff00;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="91.0" layoutY="23.0" text=" Total Confirmed Cases" textFill="#6b6767">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_confirmedCases" alignment="CENTER" layoutX="88.0" layoutY="57.0" prefHeight="25.0" prefWidth="202.0" text="Label" textFill="BLUE">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="50.0" fitWidth="60.0" focusTraversable="true" layoutX="24.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/confirmed_cases.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                                 </VBox.margin>
+                              </Pane>
+                              <Pane layoutX="11.0" layoutY="211.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #00ff00;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="90.0" layoutY="20.0" text="Recovered &amp; Discharged" textFill="#6b6767">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_recoveredCases" alignment="CENTER" layoutX="82.0" layoutY="57.0" prefHeight="25.0" prefWidth="202.0" text="Label" textFill="LIME">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="24.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/recovered.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                                 </VBox.margin>
+                              </Pane>
+                              <Pane layoutX="11.0" layoutY="391.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #00ff00;">
+                                 <children>
+                                    <Label alignment="CENTER" layoutX="111.0" layoutY="31.0" prefWidth="151.0" text="Deaths" textFill="#6b6767">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lbl_deathCases" alignment="CENTER" layoutX="85.0" layoutY="57.0" prefHeight="25.0" prefWidth="202.0" text="Label" textFill="RED">
+                                       <font>
+                                          <Font size="30.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="50.0" fitWidth="63.0" layoutX="26.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/death.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                                 </VBox.margin>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="vbox_text_field" alignment="CENTER" prefHeight="577.0" prefWidth="584.0" style="-fx-border-color: #1c4966;">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="50.0" prefWidth="457.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox prefHeight="50.0" prefWidth="187.0">
+                                       <children>
+                                          <JFXDatePicker fx:id="date_picker" defaultColor="#1c4966" onAction="#date_picker_OnAction" promptText="xx/xx/xxxx">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></JFXDatePicker>
+                                          <Label fx:id="label_error_datepicker" prefHeight="16.0" prefWidth="188.0" textFill="RED" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="11.0" layoutY="68.0" prefHeight="50.0" prefWidth="457.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox prefHeight="50.0" prefWidth="187.0">
+                                       <children>
+                                          <TextField fx:id="txt_confirmedCases" promptText="Confirmed Count" />
+                                          <Label fx:id="label_error_confirmedCases" prefHeight="16.0" prefWidth="209.0" textFill="RED" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="11.0" layoutY="196.0" prefHeight="50.0" prefWidth="457.0">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox prefHeight="50.0" prefWidth="187.0">
+                                       <children>
+                                          <TextField fx:id="txt_recoveredCases" promptText="Recovered Count" />
+                                          <Label fx:id="label_error_recoveredCases" prefHeight="16.0" prefWidth="199.0" textFill="RED" />
+                                       </children></VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="21.0" layoutY="374.0" prefHeight="50.0" prefWidth="457.0">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <VBox prefHeight="50.0" prefWidth="187.0">
+                                       <children>
+                                          <TextField fx:id="txt_deathCases" promptText="Death Count" />
+                                          <Label fx:id="label_error_deathCases" prefHeight="16.0" prefWidth="199.0" textFill="RED" />
+                                       </children></VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="TOP_CENTER" layoutX="11.0" layoutY="424.0" prefHeight="50.0" prefWidth="457.0">
+                                 <children>
+                                    <JFXButton fx:id="btn_update" buttonType="RAISED" graphicTextGap="10.0" onAction="#btn_update_OnAction" prefHeight="26.0" prefWidth="250.0" style="-fx-border-radius: 8px; -fx-background-color: #4CAF50; -fx-background-radius: 8px;" text="ADD NEW RECORD" textFill="#fffdfd">
+                                       <HBox.margin>
+                                          <Insets left="30.0" right="30.0" top="15.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <JFXButton fx:id="btn_home" buttonType="RAISED" graphicTextGap="8.0" layoutX="64.0" layoutY="27.0" onAction="#btn_home_OnAction" prefHeight="31.0" prefWidth="98.0" style="-fx-border-color: #1c4966; -fx-border-radius: 8PX;" text="HOME" textFill="RED">
+         <graphic>
+            <FontAwesomeIconView fill="#1c4966" glyphName="HOME" size="20.0" />
+         </graphic>
+      </JFXButton>
+      <VBox alignment="CENTER" layoutY="65.0" prefHeight="75.0" prefWidth="820.0" style="-fx-background-color: #1c4966;">
+         <children>
+            <Label text="Global COVID-19" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
