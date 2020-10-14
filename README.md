@@ -7,6 +7,25 @@ Java database connectivity. It is part of the Java Standard Edition platform, fr
 
 Using this system you can **manage global covid details, hospitals, quarantine centers and system users**.
 
+#### Login
+
+![login](screenshots/login.png "login")
+
+#### Covid Details
+
+![Covid details](screenshots/manage-covid-details.png "COVID DETAILS")
+
+#### Manage Details
+
+![Manage Hospitals](screenshots/manage-hospitals.png "MANAGE HOSPITALS")
+
+#### Manage Quarantine Centers
+
+![Manage Quarantine Center](screenshots/manage-qc.png "Manage Quarantine Centers")
+
+#### Manage Users
+
+![Manage Users](screenshots/manage-users.png "login")
 
 ## Requirements
 
@@ -27,6 +46,12 @@ Using this system you can **manage global covid details, hospitals, quarantine c
  6. Test it!.
  
 ## Features
+
+1. System users can only logging to the system via using their user name, 
+password and role.They cannot enter the system without  those things.
+2. Can get the exact details about confirmed cases, recovered, discharged, and death cases through this system.
+3. Can Search about hospitals and quarantine centers through this system.
+4. Only admins  have the authority to do anything  in this system.
 
 ## License
 
